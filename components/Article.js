@@ -86,8 +86,46 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Why Not to Use "Display: Hidden" in CSS',
+    date: 'Sep 18th, 2020',
+    firstParagraph: `Hodorking hodorking HODOR! Hodorking hodor - hodorking, hodorking. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
+          hodor. Hodorking, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
+          Hodor hodor hodorking hodokingr hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodorking? `,
+
+    secondParagraph: `Hodorking hodorking HODOR! Hodorking hodor - hodorking, hodorking. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
+    hodor. Hodorking, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
+    Hodor hodor hodorking hodokingr hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodorking? `,
+
+    thirdParagraph: `Hodorking hodorking HODOR! Hodorking hodor - hodorking, hodorking. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
+    hodor. Hodorking, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
+    Hodor hodor hodorking hodokingr hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodorking? `
+  },
+  {
+    title: 'The Secret Sauce for CSS Animations',
+    date: 'Aug 27th, 2020',
+    firstParagraph: `Saucy Hodor hodor HODOR! Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
+          hodor. Hodor, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
+          Hodor hodor hodor hodor hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodor? `,
+
+    secondParagraph: `Saucy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pidgeotto Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Pidgeot Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rattata Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Raticate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Spearow Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Fearow Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ekans Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Arbok Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pikachu Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Raichu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sandshrew Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Sandslash Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nidoran Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. Nidorina Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nidoqueen Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Nidoran Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nidorino Lorem ipsum dolor
+      sit amet, consectetur adipiscing elit. Nidoking Lorem ipsum`,
+
+    thirdParagraph: `Saucy Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
+          Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
+          Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   }
 ];
+// import data from './data'
 
 /*
   Step 1: Write a component called 'articleMaker' to create an article.
@@ -100,10 +138,10 @@ const data = [
 
     {three separate paragraph elements}
 
-    <span class="expandButton">+</span>
+    <span class="expandpar">+</span>
   </div>
 
-  Step 2: Still inside `articleMaker`, add an event listener to the span.expandButton.
+  Step 2: Still inside `articleMaker`, add an event listener to the span.expandpar.
   This listener should toggle the class 'article-open' on div.article.
 
   Step 3: Don't forget to return something from your function!
@@ -114,3 +152,42 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+const body = document.body;
+
+
+
+const articleMaker = ({title, date, firstParagraph, secondParagraph, thirdParagraph}) => {
+  const article = document.createElement('div')
+  const h2 = document.createElement('h2')
+  const p = document.createElement('p')
+  const span = document.createElement('span')
+
+  article.classList.add('article');
+  p.classList.add('date');
+  span.classList.add('expandpar');
+  h2.textContent = title;
+  p.textContent = date;
+  span.textContent = '+';
+
+  span.addEventListener('click', () => {
+    article.classList.toggle('article-open')
+  })
+
+  function paragraphCreator (text) {
+    const par = document.createElement('p');
+    par.textContent = text;
+    return article.appendChild(par);
+  }
+
+  article.appendChild(h2);
+  article.appendChild(p);
+  paragraphCreator(firstParagraph);
+  paragraphCreator(secondParagraph);
+  paragraphCreator(thirdParagraph);
+  article.appendChild(span);
+  return body.append(article);
+}
+
+data.forEach(item => {
+  articleMaker(item)
+});
