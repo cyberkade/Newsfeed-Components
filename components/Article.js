@@ -173,17 +173,17 @@ const articleMaker = ({title, date, firstParagraph, secondParagraph, thirdParagr
     article.classList.toggle('article-open')
   })
 
-  function paragraphCreator (text) {
+  function paragraphCreator (text, parent) {
     const par = document.createElement('p');
     par.textContent = text;
-    return article.appendChild(par);
+    return parent.appendChild(par);
   }
 
   article.appendChild(h2);
   article.appendChild(p);
-  paragraphCreator(firstParagraph);
-  paragraphCreator(secondParagraph);
-  paragraphCreator(thirdParagraph);
+  paragraphCreator(firstParagraph, article);
+  paragraphCreator(secondParagraph, article);
+  paragraphCreator(thirdParagraph, article);
   article.appendChild(span);
   return body.append(article);
 }
