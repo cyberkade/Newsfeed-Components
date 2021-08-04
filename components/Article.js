@@ -55,17 +55,17 @@ const articleMaker = ({title, date, firstParagraph, secondParagraph, thirdParagr
     }
   })
 
-  function paragraphCreator (text, parent) {
-    const par = document.createElement('p');
-    par.textContent = text;
-    return parent.appendChild(par);
+  function elementCreator (text, parent, el) {
+    const element = document.createElement(el);
+    element.textContent = text;
+    return parent.appendChild(element);
   }
 
   article.appendChild(h2);
   article.appendChild(p);
-  paragraphCreator(firstParagraph, article);
-  paragraphCreator(secondParagraph, article);
-  paragraphCreator(thirdParagraph, article);
+  elementCreator(firstParagraph, article, 'p');
+  elementCreator(secondParagraph, article, 'p');
+  elementCreator(thirdParagraph, article, 'p');
   article.appendChild(span);
   console.log(article);
   return body.append(article);
