@@ -47,6 +47,7 @@ const articleMaker = ({title, date, firstParagraph, secondParagraph, thirdParagr
 
   span.addEventListener('click', () => {
     article.classList.toggle("article-open");
+    article.classList.toggle('articleAnimate');
     if (span.textContent == '+') {
       span.textContent = '-';
     } else {

@@ -33,7 +33,7 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    font-size: 12px;
+    font-size: 16px;
     color: grey;
     cursor: pointer;
     transform: translate(-50%);
@@ -43,6 +43,35 @@
 
 .article-open {
   height: 400px;
+}
+
+.articleAnimate{
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+@-webkit-keyframes growDown {
+  0% {
+      transform: scaleY(0)
+  }
+  80% {
+      transform: scaleY(1.1)
+  }
+  100% {
+      transform: scaleY(1)
+  }
+}
+
+@keyframes growDown {
+  0% {
+      transform: scaleY(0)
+  }
+  80% {
+      transform: scaleY(1.1)
+  }
+  100% {
+      transform: scaleY(1)
+  }
 }
 
 

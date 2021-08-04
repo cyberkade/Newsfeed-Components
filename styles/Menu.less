@@ -28,3 +28,32 @@
 .menu--open {
   display: block;
 }
+
+.menuAnimate{
+  animation: rotateMenu 400ms ease-in-out forwards;
+  transform-origin: top center;
+}
+    
+@-webkit-keyframes rotateMenu {
+    0% {
+        transform: rotateX(-90deg)
+    }
+    70% {
+        transform: rotateX(20deg) 
+    }
+    100% {
+        transform: rotateX(0deg) 
+    }
+}
+
+@keyframes rotateMenu {
+    0% {
+        transform: rotateX(-90deg)
+    }
+    70% {
+        transform: rotateX(20deg) 
+    }
+    100% {
+        transform: rotateX(0deg) 
+    }
+}

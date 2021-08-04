@@ -39,9 +39,10 @@ const menuMaker = (arr) => {
 
   btn.addEventListener('click', () => {
     menu.classList.toggle('menu--open');
+    // menu.classList.toggle('dropdownRotate');
   })
 
-  menu.className = 'menu';
+  menu.className = 'menu menuAnimate';
 
   menu.appendChild(ul);
   arr.forEach(item => {
