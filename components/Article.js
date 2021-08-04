@@ -40,7 +40,7 @@ const articleMaker = ({title, date, firstParagraph, secondParagraph, thirdParagr
 
   article.classList.add('article');
   p.classList.add('date');
-  span.classList.add('expandpar');
+  span.classList.add('expandButton');
   h2.textContent = title;
   p.textContent = date;
   span.textContent = '+';
@@ -61,6 +61,7 @@ const articleMaker = ({title, date, firstParagraph, secondParagraph, thirdParagr
   paragraphCreator(secondParagraph, article);
   paragraphCreator(thirdParagraph, article);
   article.appendChild(span);
+  console.log(article);
   return body.append(article);
 }
 
