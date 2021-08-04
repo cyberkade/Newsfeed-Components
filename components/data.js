@@ -85,7 +85,7 @@ const data = [
             Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
     },
     {
-      title: 'Why Not to Use "Display: Hidden" in CSS',
+      title: 'Why Not to Use "Display: None" in CSS',
       date: 'Sep 18th, 2020',
       firstParagraph: `Hodorking hodorking HODOR! Hodorking hodor - hodorking, hodorking. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
             hodor. Hodorking, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
@@ -98,6 +98,19 @@ const data = [
       thirdParagraph: `Hodorking hodorking HODOR! Hodorking hodor - hodorking, hodorking. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
       hodor. Hodorking, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
       Hodor hodor hodorking hodokingr hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodorking? `
+    },
+    {
+      title: 'JavaScript for Christmas?',
+      date: 'Dec 25th, 2020',
+      firstParagraph: ` Merry Christmas JavaScript, Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho!
+      Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! `,
+  
+      secondParagraph: ` Merry Christmas JavaScript, Hodorking hodor - hodorking, hodorking. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
+      hodor. Hodorking, hodor. Hodor. Hodor, hodor? Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho!
+      Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! `,
+  
+      thirdParagraph: ` Merry Christmas JavaScript, Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho!
+      Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! Ho Ho Ho! `,
     },
     {
       title: 'The Secret Sauce for CSS Animations',

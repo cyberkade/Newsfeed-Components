@@ -46,7 +46,12 @@ const articleMaker = ({title, date, firstParagraph, secondParagraph, thirdParagr
   span.textContent = '+';
 
   span.addEventListener('click', () => {
-    article.classList.toggle('article-open')
+    article.classList.toggle("article-open");
+    if (span.textContent == '+') {
+      span.textContent = '-';
+    } else {
+      span.textContent = '+';
+    }
   })
 
   function paragraphCreator (text, parent) {
