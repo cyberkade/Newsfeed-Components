@@ -29,8 +29,7 @@ import data from './data.js'
   Refresh the page to see the new article.
 */
 const body = document.body;
-
-
+const articles = body.querySelector('.articles');
 
 const articleMaker = ({title, date, firstParagraph, secondParagraph, thirdParagraph}) => {
   const article = document.createElement('div')
@@ -68,9 +67,9 @@ const articleMaker = ({title, date, firstParagraph, secondParagraph, thirdParagr
   elementCreator(thirdParagraph, article, 'p');
   article.appendChild(span);
   console.log(article);
-  return body.append(article);
+  
+  return article
 }
 
-data.forEach(item => {
-  articleMaker(item)
-});
+data.forEach(article => articles.appendChild(articleMaker(article)));
+
